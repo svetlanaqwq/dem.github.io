@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>New Year Crossword</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      background: linear-gradient(to bottom, #e6f7ff, #f0f8ff);
+      padding: 20px;
+      text-align: center;
+    }
+    h1 {
+      color: #c1272d;
+      text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+    }
+    .container {
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      flex-wrap: wrap;
+      margin-top: 20px;
+    }
+    table {
+      border-collapse: collapse;
+      background-color: white;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+      border-radius: 8px;
+      overflow: hidden;
+    }
+    td {
+      width: 40px;
+      height: 40px;
+      border: 1px solid #888;
+      text-align: center;
+      vertical-align: middle;
+      font-weight: bold;
+      font-size: 18px;
+      background-color: #fff;
+      color: #2c3e50;
+    }
+    .black {
+      background-color: #333;
+    }
+    .word-list {
+      background: white;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      max-width: 250px;
+      text-align: left;
+    }
+    .word-list h2 {
+      margin-top: 0;
+      color: #27ae60;
+    }
+    .word-item {
+      margin: 10px 0;
+      padding-left: 10px;
+      border-left: 3px solid #e74c3c;
+    }
+  </style>
+</head>
+<body>
+  <h1>🎄 New Year Crossword 🎁</h1>
+
+  <div class="container">
+    <table id="crossword">
+      <!-- Grid: 10 rows x 10 columns -->
+      <tr><td>c</td><td>h</td><td>r</td><td>i</td><td>s</td><td>t</td><td>m</td><td>a</td><td>s</td><td></td></tr>
+      <tr><td>s</td><td class="black"></td><td></td><td></td><td>g</td><td class="black"></td><td></td><td></td><td></td><td></td></tr>
+      <tr><td>n</td><td class="black"></td><td></td><td></td><td>i</td><td class="black"></td><td></td><td></td><td></td><td></td></tr>
+      <tr><td>o</td><td class="black"></td><td></td><td></td><td>f</td><td class="black"></td><td></td><td></td><td></td><td></td></tr>
+      <tr><td>w</td><td class="black"></td><td>s</td><td>n</td><td>t</td><td class="black"></td><td></td><td></td><td></td><td></td></tr>
+      <tr><td>m</td><td class="black"></td><td>a</td><td></td><td>a</td><td class="black"></td><td></td><td></td><td></td><td></td></tr>
+      <tr><td>a</td><td class="black"></td><td>n</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+      <tr><td>n</td><td class="black"></td><td>t</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+      <tr><td></td><td></td><td>a</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+      <tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+    </table>
+
+    <div class="word-list">
+      <h2>Words to find:</h2>
+      <div class="word-item">🎄 Christmas</div>
+      <div class="word-item">🎁 Gifts</div>
+      <div class="word-item">⛄ Snowman</div>
+      <div class="word-item">❄️ Snowballs</div>
+      <div class="word-item">🎅 Santa</div>
+    </div>
+  </div>
+</body>
+</html>

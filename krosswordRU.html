@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Новогодний кроссворд</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f0f8ff;
+      padding: 20px;
+    }
+    h1 {
+      text-align: center;
+      color: #b22222;
+    }
+    .crossword-container {
+      display: flex;
+      gap: 40px;
+      justify-content: center;
+      margin-top: 20px;
+    }
+    table {
+      border-collapse: collapse;
+      background-color: white;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    td {
+      width: 30px;
+      height: 30px;
+      border: 1px solid #999;
+      text-align: center;
+      vertical-align: middle;
+      font-weight: bold;
+      font-size: 16px;
+      background-color: #fff;
+    }
+    .black {
+      background-color: #333;
+    }
+    .word-list {
+      background-color: white;
+      padding: 15px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    .word-list h2 {
+      margin-top: 0;
+      color: #2e8b57;
+    }
+    .word-item {
+      margin: 8px 0;
+    }
+  </style>
+</head>
+<body>
+  <h1>🎄 Новогодний кроссворд 🎄</h1>
+
+  <div class="crossword-container">
+    <table id="crossword">
+      <!-- Сетка кроссворда 10x10 -->
+      <tr><td>с</td><td>н</td><td>е</td><td>г</td><td>о</td><td>в</td><td>и</td><td>к</td><td></td><td></td></tr>
+      <tr><td>н</td><td class="black"></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+      <tr><td>е</td><td class="black"></td><td>ё</td><td>л</td><td>к</td><td>а</td><td></td><td></td><td></td><td></td></tr>
+      <tr><td>ж</td><td class="black"></td><td>а</td><td class="black"></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+      <tr><td>и</td><td class="black"></td><td>р</td><td class="black"></td><td>м</td><td>о</td><td>р</td><td>о</td><td>з</td><td></td></tr>
+      <tr><td>н</td><td class="black"></td><td>и</td><td class="black"></td><td>а</td><td></td><td></td><td></td><td></td><td></td></tr>
+      <tr><td>к</td><td class="black"></td><td>к</td><td class="black"></td><td>н</td><td></td><td></td><td></td><td></td><td></td></tr>
+      <tr><td></td><td></td><td>х</td><td>л</td><td>о</td><td>п</td><td>у</td><td>ш</td><td>к</td><td>и</td></tr>
+      <tr><td></td><td></td><td>д</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+      <tr><td></td><td></td><td>а</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+    </table>
+
+    <div class="word-list">
+      <h2>Слова:</h2>
+      <div class="word-item">1. 🧑‍🎄 Снеговик</div>
+      <div class="word-item">2. ❄️ Снежинка</div>
+      <div class="word-item">3. ❄️ Мороз</div>
+      <div class="word-item">4. 🎄 Ёлка</div>
+      <div class="word-item">5. 🎉 Хлопушки</div>
+      <div class="word-item">6. 🎈 Шарик</div>
+      <div class="word-item">7. 🍊 Мандарины</div>
+      <div class="word-item">8. 🎁 Подарок</div>
+      <div class="word-item">9. 😊 Радость</div>
+      <div class="word-item">10. 🥳 Веселье</div>
+    </div>
+  </div>
+</body>
+</html>
