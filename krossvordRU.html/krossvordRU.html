@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Новогодний кроссворд</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f0f8ff;
+      text-align: center;
+      padding: 20px;
+    }
+    h1 {
+      color: #d32f2f;
+    }
+    table {
+      margin: 20px auto;
+      border-collapse: collapse;
+      background-color: white;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    td {
+      width: 30px;
+      height: 30px;
+      border: 1px solid #000;
+      text-align: center;
+      vertical-align: middle;
+      font-weight: bold;
+      font-size: 16px;
+      background-color: #fff;
+    }
+    .empty {
+      background-color: #e0e0e0;
+    }
+    .number {
+      font-size: 10px;
+      color: #d32f2f;
+      position: relative;
+      top: -10px;
+      left: -10px;
+      float: left;
+    }
+    .clues {
+      display: inline-block;
+      text-align: left;
+      margin: 20px;
+      background-color: #fff;
+      padding: 15px;
+      border-radius: 8px;
+      box-shadow: 0 0 8px rgba(0,0,0,0.1);
+    }
+    .clues h2 {
+      margin-top: 0;
+      color: #1976d2;
+    }
+    .clue {
+      margin: 5px 0;
+    }
+  </style>
+</head>
+<body>
+  <h1>🎄 Новогодний кроссворд 🎄</h1>
+
+  <!-- Кроссворд в виде таблицы 12x12 -->
+  <table>
+    <tr>
+      <td class="empty"></td><td class="empty"></td><td class="empty"></td><td class="empty"></td><td class="empty"></td><td class="empty"></td><td class="empty"></td><td class="empty"></td><td class="empty"></td><td class="empty"></td><td class="empty"></td><td class="empty"></td>
+    </tr>
+    <tr>
+      <td class="empty"></td><td><span class="number">1</span>ё</td><td>л</td><td>к</td><td>а</td><td class="empty"></td><td class="empty"></td><td class="empty"></td><td class="empty"></td><td class="empty"></td><td class="empty"></td><td class="empty"></td>
+    </tr>
+    <tr>
+      <td class="empty"></td><td><span class="number">2</span>п</td><td class="empty"></td><td class="empty"></td><td class="empty"></td><td class="empty"></td><td class="empty"></td><td class="empty"></td><td class="empty"></td><td class="empty"></td><td class="empty"></td><td class="empty"></td>
+    </tr>
+    <tr>
+      <td class="empty"></td><td>о</td><td class="empty"></td><td class="empty"></td><td class="empty"></td><td class="empty"></td><td class="empty"></td><td class="empty"></td><td class="empty"></td><td class="empty"></td><td class="empty"></td><td class="empty"></td>
+    </tr>
+    <tr>
+      <td class="empty"></td><td>д</td><td class="empty"></td><td class="empty"></td><td class="empty"></td><td class="empty"></td><td class="empty"></td><td class="empty"></td><td class="empty"></td><td class="empty"></td><td class="empty"></td><td class="empty"></td>
+    </tr>
+    <tr>
+      <td class="empty"></td><td>а</td><td class="empty"></td><td><span class="number">3</span>с</td><td>н</td><td>е</td><td>г</td><td class="empty"></td><td><span class="number">4</span>г</td><td>и</td><td>р</td><td>л</td>
+    </tr>
+    <tr>
+      <td class="empty"></td><td>р</td><td class="empty"></td><td class="empty"></td><td class="empty"></td><td class="empty"></td><td class="empty"></td><td class="empty"></td><td>л</td><td class="empty"></td><td class="empty"></td><td>я</td>
+    </tr>
+    <tr>
+      <td class="empty"></td><td>о</td><td class="empty"></td><td class="empty"></td><td class="empty"></td><td><span class="number">5</span>о</td><td>л</td><td>и</td><td>в</td><td>ь</td><td>е</td><td>н</td>
+    </tr>
+    <tr>
+      <td class="empty"></td><td>к</td><td class="empty"></td><td class="empty"></td><td class="empty"></td><td class="empty"></td><td class="empty"></td><td class="empty"></td><td>д</td><td class="empty"></td><td class="empty"></td><td>д</td>
+    </tr>
+    <tr>
+      <td><span class="number">6</span>ш</td><td>а</td><td>м</td><td>п</td><td>а</td><td>н</td><td>с</td><td>к</td><td>о</td><td>е</td><td class="empty"></td><td>а</td>
+    </tr>
+    <tr>
+      <td>м</td><td class="empty"></td><td class="empty"></td><td class="empty"></td><td class="empty"></td><td class="empty"></td><td class="empty"></td><td class="empty"></td><td><span class="number">7</span>м</td><td>а</td><td>н</td><td>д</td>
+    </tr>
+    <tr>
+      <td>о</td><td class="empty"></td><td><span class="number">8</span>с</td><td>н</td><td>е</td><td>ж</td><td>и</td><td>н</td><td>к</td><td>а</td><td class="empty"></td><td>а</td>
+    </tr>
+    <tr>
+      <td>р</td><td class="empty"></td><td>н</td><td class="empty"></td><td class="empty"></td><td class="empty"></td><td class="empty"></td><td class="empty"></td><td><span class="number">9</span>с</td><td>н</td><td>е</td><td>г</td>
+    </tr>
+    <tr>
+      <td>о</td><td class="empty"></td><td>е</td><td class="empty"></td><td class="empty"></td><td class="empty"></td><td class="empty"></td><td class="empty"></td><td>о</td><td class="empty"></td><td class="empty"></td><td>о</td>
+    </tr>
+    <tr>
+      <td>з</td><td class="empty"></td><td>г</td><td class="empty"></td><td class="empty"></td><td class="empty"></td><td class="empty"></td><td class="empty"></td><td>в</td><td class="empty"></td><td class="empty"></td><td>в</td>
+    </tr>
+    <tr>
+      <td class="empty"></td><td class="empty"></td><td>о</td><td class="empty"></td><td class="empty"></td><td class="empty"></td><td class="empty"></td><td class="empty"></td><td>и</td><td class="empty"></td><td class="empty"></td><td>и</td>
+    </tr>
+    <tr>
+      <td class="empty"></td><td class="empty"></td><td>в</td><td class="empty"></td><td class="empty"></td><td class="empty"></td><td class="empty"></td><td class="empty"></td><td>к</td><td class="empty"></td><td class="empty"></td><td>к</td>
+    </tr>
+    <tr>
+      <td class="empty"></td><td class="empty"></td><td><span class="number">10</span>м</td><td>о</td><td>р</td><td>о</td><td>з</td><td class="empty"></td><td class="empty"></td><td class="empty"></td><td class="empty"></td><td class="empty"></td>
+    </tr>
+  </table>
+
+  <div class="clues">
+    <h2>Подсказки:</h2>
+    <div class="clue"><strong>По горизонтали:</strong></div>
+    <div class="clue">4. Украшение ёлки из огоньков</div>
+    <div class="clue">5. Новогодний салат</div>
+    <div class="clue">6. Игристое вино для праздника</div>
+    <div class="clue">7. Цитрусовый фрукт под ёлкой</div>
+    <div class="clue">8. Зимний узор на окне</div>
+    <div class="clue">9. Человечек из снега</div>
+    <div class="clue">10. Сильный холод</div>
+
+    <div class="clue"><strong>По вертикали:</strong></div>
+    <div class="clue">1. Главное новогоднее дерево</div>
+    <div class="clue">2. То, что ждут дети под ёлкой</div>
+    <div class="clue">3. Белое покрытие на улице зимой</div>
+  </div>
+
+</body>
+</html>
