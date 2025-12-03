@@ -1,4 +1,10 @@
-<head>
+
+@font-face {
+	font-family: “Pudelinka”;
+	src: url(”Fonts/pudelinka.ttf” ) format('truetype’);
+	font-weight: normal;
+	font-style: normal;
+}
 <link type=“text/css” rel=“stylesheet” href=“style.css” />
 body{
 	background-color: #d2b48c;
@@ -13,4 +19,4 @@ blockquote.q {
 	border-left: 4px solid #8B0000;
 	font-style: italic;
 }
-</head>
+p.quote { font-family: “Pudelinka”, cursive;}
