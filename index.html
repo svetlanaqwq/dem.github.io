@@ -44,9 +44,6 @@
      <a href="поздравление с рождеством.odt" target "_blank">= Открыть "позравление с рождеством " (PDF)</a>
      <!-- или -->
      <a href="подзравление с рождеством.odt" download>скачать</a>
-</head>
-     <body>
-     <!DOCTYPE html>
 <html lang="ru">
 <head>
   <meta charset="UTF-8" />
@@ -79,5 +76,109 @@
   <p>Путешествие в тысячу миль начинается с одного шага. — Лао Цзы</p>
 </body>
 </html>
+<body> 
+      <h2> 17/01/2026</h2>
+     <!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Шифр Цезаря — Решение</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      max-width: 800px;
+      margin: 40px auto;
+      padding: 20px;
+      background-color: #f9f9f9;
+      color: #333;
+    }
+    h1, h2 {
+      color: #2c3e50;
+    }
+    .answer {
+      background: #eef7ff;
+      padding: 15px;
+      border-left: 4px solid #3498db;
+      margin: 15px 0;
+      border-radius: 0 6px 6px 0;
+    }
+    .interactive {
+      margin-top: 40px;
+      padding: 20px;
+      background: #fff;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+    }
+    input, button {
+      padding: 8px 12px;
+      margin: 5px;
+      font-size: 16px;
+    }
+    #result {
+      margin-top: 15px;
+      font-weight: bold;
+      color: #27ae60;
+    }
+  </style>
+</head>
+<body>
+  <h1>🔐 Шифр Цезаря — Решение задач</h1>
+
+  <h2>1. Определение ключей</h2>
+  <div class="answer">
+    а. АПЕЛЬСИН → САЦЬНВЩЮ → <strong>Ключ = 17</strong>
+  </div>
+  <div class="answer">
+    б. АБРИКОС → ЫЬЛГЕЙМ → <strong>Ключ = 27</strong>
+  </div>
+
+  <h2>2. Расшифровка сообщений</h2>
+  <div class="answer">
+    а. ФХНЗКЧ → <strong>ПРИВЕТ</strong> (ключ = 5)
+  </div>
+  <div class="answer">
+    б. ЦЩЕБФ → <strong>ВЕСНА</strong> (ключ = 20)
+  </div>
+
+  <h2>3. Шифрование фамилии</h2>
+  <div class="answer">
+    Горелкина (ключ = 10) → <strong>НШЪПХФТЧК</strong>
+  </div>
+
+  <div class="interactive">
+    <h2>🔧 Интерактивный дешифратор (русский, без Ё)</h2>
+    <input type="text" id="cipherText" placeholder="Введите шифротекст (заглавные буквы)" maxlength="50">
+    <input type="number" id="key" min="1" max="31" value="5" placeholder="Ключ (1–31)">
+    <button onclick="decrypt()">Расшифровать</button>
+    <div id="result"></div>
+  </div>
+
+  <script>
+    const ALPHABET = 'АБВГДЕЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯ'; // 32 буквы
+
+    function caesarDecrypt(text, key) {
+      return text
+        .split('')
+        .map(char => {
+          const idx = ALPHABET.indexOf(char);
+          if (idx === -1) return char; // не буква — оставить как есть
+          const decryptedIdx = (idx - key + 32) % 32;
+          return ALPHABET[decryptedIdx];
+        })
+        .join('');
+    }
+
+    function decrypt() {
+      const text = document.getElementById('cipherText').value.toUpperCase().trim();
+      const key = parseInt(document.getElementById('key').value);
+      if (!text || isNaN(key) || key < 1 || key > 31) {
+        document.getElementById('result').textContent = 'Введите корректные данные';
+        return;
+      }
+      const result = caesarDecrypt(text, key);
+      document.getElementById('result').textContent = `Результат: ${result}`;
+    }
+  </script>
 </body>
 </html>
