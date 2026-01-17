@@ -100,19 +100,92 @@
 
   <h2>Из чего состоит доменное имя?</h2>
   <p><em>Дата публикации: 1 января 1996 г.</em></p>
-  <p>Рассмотрим доменное имя моего сайта:</p>
-  <p><strong>https://svetlanaqwq.github.io/dem.github.io/</strong></p>
-  <p>На самом деле, основной хост (домен) здесь — это:</p>
-  <p><code>svetlanaqwq.github.io</code></p>
-  <p>Разберём его по уровням иерархии DNS (справа налево):</p>
-  <ul>
-    <li><strong><code>.io</code></strong> — домен верхнего уровня (TLD).</li>
-    <li><strong><code>github</code></strong> — домен второго уровня (SLD).</li>
-    <li><strong><code>svetlanaqwq</code></strong> — поддомен третьего уровня (ваш аккаунт на GitHub).</li>
-  </ul>
-  <p>Часть <code>/dem.github.io/</code> — это путь к ресурсу, а не часть домена.</p>
-  <p>Полное доменное имя (FQDN): <code>svetlanaqwq.github.io</code>.</p>
+  <!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Структура доменного имени</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      max-width: 760px;
+      margin: 40px auto;
+      padding: 20px;
+      background-color: #f5f0ff; /* нежно-фиолетовый фон */
+      color: #333;
+      line-height: 1.6;
+    }
+    h1 {
+      color: #6a0dad;
+      text-align: center;
+    }
+    code {
+      background: #e6d9ff;
+      padding: 2px 6px;
+      border-radius: 4px;
+      font-family: monospace;
+    }
+    .domain-level {
+      background: #e6d9ff;
+      padding: 12px;
+      margin: 12px 0;
+      border-left: 4px solid #9b59b6;
+      border-radius: 0 6px 6px 0;
+    }
+    .note {
+      background: #fff8e1;
+      padding: 12px;
+      border-left: 4px solid #ffc107;
+      margin: 20px 0;
+      border-radius: 0 6px 6px 0;
+    }
+    hr {
+      margin: 30px 0;
+      border: 0;
+      border-top: 1px dashed #ccc;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Из чего состоит доменное имя?</h1>
+
+  <p><em>Дата публикации: 17 января 2026 г.</em></p>
+
+  <p>Рассмотрим полный URL моего сайта:</p>
+  <p><code>https://svetlanaqwq.github.io/dem.github.io/</code></p>
+
+  <p>Важно понимать: только часть до первого слэша (<code>/</code>) — это <strong>доменное имя</strong>. Всё остальное — путь к ресурсу.</p>
+
+  <p>Таким образом, настоящее доменное имя (FQDN — Fully Qualified Domain Name):</p>
+  <p><strong><code>svetlanaqwq.github.io</code></strong></p>
+
+  <p>Разберём его по уровням иерархии DNS (читаем <strong>справа налево</strong>):</p>
+
+  <div class="domain-level">
+    <strong>1. Домен верхнего уровня (TLD — Top-Level Domain):</strong><br>
+    <code>.io</code> — изначально национальный домен Британской территории в Индийском океане, но сейчас популярный в IT-сфере.
+  </div>
+
+  <div class="domain-level">
+    <strong>2. Домен второго уровня (SLD — Second-Level Domain):</strong><br>
+    <code>github</code> — принадлежит компании GitHub и используется для сервиса GitHub Pages.
+  </div>
+
+  <div class="domain-level">
+    <strong>3. Поддомен третьего уровня:</strong><br>
+    <code>svetlanaqwq</code> — это имя вашего аккаунта на GitHub. Оно делает ваш сайт уникальным в рамках <code>github.io</code>.
+  </div>
+
+  <div class="note">
+    <strong>Важно!</strong> Часть <code>/dem.github.io/</code> — это <strong>не домен</strong>, а <strong>путь</strong> (каталог или файл) на сервере. Она не участвует в DNS-иерархии и не влияет на доменное имя.
+  </div>
+
   <hr>
+  <p style="text-align: center; color: #6a0dad; font-style: italic;">
+    «Путешествие в тысячу миль начинается с одного шага» — Лао Цзы
+  </p>
 
   <h2>17 января, 2026</h2>
   <h1>🔐 Шифр Цезаря — Решение задач</h1>
