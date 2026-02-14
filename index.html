@@ -230,36 +230,164 @@
 2384920384920384920384920384920384920384920384920384920384920384920384920384920384920384920384920384920384920384920384920384920384920384920384920384920384920384920384920384920384920384920384920384920384920384920384920384920384920384920384920384920384920384920384920384920384920384920384920384920384920384920384920384920384920384920384920384920384920384920384920384920384920384920384920384920384920384920384920384920384920384920384920384920384920384920384920384920384920384920384920384920384920384920384920384920384......
 </html>
 
-    <!DOCTYPE html>
+   <!DOCTYPE html>
 <html lang="ru">
 <head>
   <meta charset="UTF-8">
-  <title>Результаты классификации изображений</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Классификация ResNet18</title>
   <style>
-    body { font-family: Arial, sans-serif; max-width: 800px; margin: 40px auto; padding: 20px; }
-    .result { background: #f8f9fa; border-left: 4px solid #007bff; padding: 15px; margin: 20px 0; }
-    .success { border-left-color: #28a745; }
-    .timestamp { color: #6c757d; font-size: 0.9em; }
-    img { max-width: 300px; margin: 10px 0; border-radius: 4px; }
+    * { box-sizing: border-box; }
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      line-height: 1.6;
+      color: #333;
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 25px;
+      background: linear-gradient(135deg, #f5f7fa 0%, #e4edf5 100%);
+    }
+    header {
+      text-align: center;
+      margin-bottom: 35px;
+      padding: 20px;
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    }
+    h1 {
+      color: #1a3a6c;
+      margin-bottom: 8px;
+      font-size: 2.2rem;
+    }
+    .model-badge {
+      display: inline-block;
+      background: #e9ecef;
+      color: #1a3a6c;
+      padding: 4px 12px;
+      border-radius: 20px;
+      font-weight: bold;
+      letter-spacing: 0.5px;
+      margin-top: 5px;
+    }
+    .result-card {
+      background: white;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 6px 16px rgba(0,0,0,0.12);
+      margin: 25px 0;
+      transition: transform 0.3s ease;
+    }
+    .result-card:hover {
+      transform: translateY(-3px);
+    }
+    .image-container {
+      height: 320px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #f8f9fa;
+      overflow: hidden;
+    }
+    .image-container img {
+      max-width: 100%;
+      max-height: 100%;
+      object-fit: contain;
+      padding: 10px;
+    }
+    .content {
+      padding: 22px;
+    }
+    .date-model {
+      font-weight: bold;
+      font-size: 1.35rem;
+      color: #d32f2f;
+      margin: 8px 0;
+      padding: 10px;
+      background: #fff8f8;
+      border-left: 3px solid #ff6b6b;
+      border-radius: 0 4px 4px 0;
+    }
+    .question {
+      background: #e3f2fd;
+      padding: 12px;
+      border-radius: 8px;
+      margin: 15px 0;
+      font-weight: 500;
+    }
+    .answer {
+      display: flex;
+      align-items: center;
+      font-weight: bold;
+      color: #2e7d32;
+      font-size: 1.15rem;
+      margin-top: 8px;
+    }
+    .answer::before {
+      content: "✓";
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 28px;
+      height: 28px;
+      background: #4caf50;
+      color: white;
+      border-radius: 50%;
+      margin-right: 10px;
+      font-size: 1.1rem;
+    }
+    footer {
+      text-align: center;
+      margin-top: 30px;
+      color: #6c757d;
+      font-size: 0.95rem;
+      padding-top: 15px;
+      border-top: 1px solid #eee;
+    }
+    @media (max-width: 600px) {
+      .image-container { height: 250px; }
+      body { padding: 15px; }
+    }
   </style>
 </head>
 <body>
-  <h1>🖼️ Классификация изображений с помощью ResNet50</h1>
-  
-  <div class="result success">
-    <div class="timestamp">14.02.2026</div>
-    <strong>Собака</strong><br>
-    <img src="https://images.unsplash.com/photo-1548199973-03cce0bbc87b?q=80&w=300" alt="Собака">
-    <p>✅ Модель распознала: <strong>German shepherd</strong> (92.45%)</p>
+  <header>
+    <h1>🖼️ Классификация изображений</h1>
+    <div class="model-badge">Модель: ResNet18 (предобучена на ImageNet)</div>
+  </header>
+
+  <!-- Собака -->
+  <div class="result-card">
+    <div class="image-container">
+      <img src="https://images.unsplash.com/photo-1548199973-03cce0bbc87b?auto=format&fit=crop&w=600" 
+           alt="Фото собаки" 
+           onerror="this.src='https://via.placeholder.com/400x300?text=Изображение+недоступно'">
+    </div>
+    <div class="content">
+      <div class="date-model">14.0.2026 Ответ модели: German shepherd</div>
+      <div class="question">Возьмите фото из Всемирной паутины с изображением собаки и загрузите его в код. Модель справилась с классификацией?</div>
+      <div class="answer">Да</div>
+    </div>
   </div>
 
-  <div class="result success">
-    <div class="timestamp">14.02.2026</div>
-    <strong>Гитара</strong><br>
-    <img src="https://images.unsplash.com/photo-1516341020729-1af8711b8e87?q=80&w=300" alt="Гитара">
-    <p>✅ Модель распознала: <strong>acoustic guitar</strong> (98.76%)</p>
+  <!-- Гитара -->
+  <div class="result-card">
+    <div class="image-container">
+      <img src="https://images.unsplash.com/photo-1516341020729-1af8711b8e87?auto=format&fit=crop&w=600" 
+           alt="Фото гитары" 
+           onerror="this.src='https://via.placeholder.com/400x300?text=Изображение+недоступно'">
+    </div>
+    <div class="content">
+      <div class="date-model">14.0.2026 Ответ модели: acoustic guitar</div>
+      <div class="question">Возьмите фото из Всемирной паутины с изображением гитары и загрузите его в код. Модель справилась с классификацией?</div>
+      <div class="answer">Да</div>
+    </div>
   </div>
 
-  <p><em>Результаты обновляются автоматически при запуске скрипта <code>app.py</code></em></p>
+  <footer>
+    <p>Изображения загружены из открытых источников (Unsplash).<br>
+    Дата в формате "14.0.2026" указана в соответствии с техническим заданием.<br>
+    Для корректной даты рекомендуется использовать формат ДД.ММ.ГГГГ (например, 14.02.2026).</p>
+  </footer>
 </body>
 </html>
