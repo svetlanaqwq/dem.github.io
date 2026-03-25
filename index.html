@@ -389,5 +389,25 @@
     Дата в формате "14.0.2026" указана в соответствии с техническим заданием.<br>
     Для корректной даты рекомендуется использовать формат ДД.ММ.ГГГГ (например, 14.02.2026).</p>
   </footer>
+
+
+  #разбиваем данные на тренировочную и тестовую часть
+from sklearn.model_selection import train_test_split
+
+X_train, X_test, y_train, y_test = train_test_split(
+    x,              # Признаки (возраст, зарплата, пол)
+    y,              # Цель (одобрение кредита)
+    test_size=0.2,  # 20% данных уйдет в тест, 80% - в обучение
+    random_state=42 # Фиксирует случайность для повторяемости результата
+)
+  #создаем дерево решений
+from sklearn.tree import DecisionTreeClassifier
+
+tree = DecisionTreeClassifier(max_depth=5, random_state=42)
+  #обучаем дерево на тренировочных данных
+tree.fit(X_train, y_train)
+
+#проверяем работу дерева на тестовой части
+tree.score(X_test, y_test)
 </body>
 </html>
