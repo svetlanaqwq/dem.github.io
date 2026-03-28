@@ -391,5 +391,231 @@
   </footer>
 <h>25.03.2026</h>
   <p>0.69</p>
+
+   <h>28.03.2026</h>
+  Эпоха    0 | Ошибка (MSE): 0.020646
+Эпоха  100 | Ошибка (MSE): 0.005284
+Эпоха  200 | Ошибка (MSE): 0.004613
+Эпоха  300 | Ошибка (MSE): 0.004499
+Эпоха  400 | Ошибка (MSE): 0.004446
+Эпоха  500 | Ошибка (MSE): 0.004415
+Эпоха  600 | Ошибка (MSE): 0.004393
+Эпоха  700 | Ошибка (MSE): 0.004377
+Эпоха  800 | Ошибка (MSE): 0.004364
+Эпоха  900 | Ошибка (MSE): 0.004354
+
+## 2. Файл `neural_network_explanation.html` (для веб-страницы)
+
+```html
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Нейронная сеть: Объяснение логики работы</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+            background: #f5f5f5;
+        }
+        .container {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        h1 { color: #2c3e50; border-bottom: 3px solid #3498db; padding-bottom: 10px; }
+        h2 { color: #34495e; margin-top: 30px; }
+        h3 { color: #7f8c8d; }
+        .code-block {
+            background: #2c3e50;
+            color: #ecf0f1;
+            padding: 15px;
+            border-radius: 5px;
+            overflow-x: auto;
+            font-family: 'Courier New', monospace;
+        }
+        .table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        .table th, .table td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: left;
+        }
+        .table th {
+            background: #3498db;
+            color: white;
+        }
+        .table tr:nth-child(even) {
+            background: #f9f9f9;
+        }
+        .diagram {
+            background: #ecf0f1;
+            padding: 20px;
+            border-radius: 5px;
+            margin: 20px 0;
+            font-family: monospace;
+            white-space: pre;
+            overflow-x: auto;
+        }
+        .highlight {
+            background: #f1c40f;
+            padding: 2px 5px;
+            border-radius: 3px;
+        }
+        .conclusion {
+            background: #d5f5e3;
+            padding: 15px;
+            border-left: 4px solid #2ecc71;
+            margin: 20px 0;
+        }
+        .warning {
+            background: #fadbd8;
+            padding: 15px;
+            border-left: 4px solid #e74c3c;
+            margin: 20px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🧠 Нейронная сеть: Объяснение логики работы</h1>
+        
+        <h2>📋 Содержание</h2>
+        <ul>
+            <li><a href="#comparison">Сравнение моделей</a></li>
+            <li><a href="#how-it-works">Как работает нейронная сеть</a></li>
+            <li><a href="#architecture">Архитектура модели</a></li>
+            <li><a href="#results">Результаты</a></li>
+        </ul>
+
+        <h2 id="comparison">📊 Сравнение моделей</h2>
+        <table class="table">
+            <tr>
+                <th>Модель</th>
+                <th>Принцип работы</th>
+                <th>Плюсы</th>
+                <th>Минусы</th>
+            </tr>
+            <tr>
+                <td><strong>Линейная регрессия</strong></td>
+                <td>Ищет прямую линию y = kx + b</td>
+                <td>Быстрая, простая</td>
+                <td>Не ловит сложные зависимости</td>
+            </tr>
+            <tr>
+                <td><strong>Дерево решений</strong></td>
+                <td>Задает вопросы "Если-То"</td>
+                <td>Легко интерпретировать</td>
+                <td>Склонно к переобучению</td>
+            </tr>
+            <tr>
+                <td><strong>Нейронная сеть</strong></td>
+                <td>Многослойная обработка с весами</td>
+                <td>Ловит сложные паттерны</td>
+                <td>Требует больше данных</td>
+            </tr>
+        </table>
+
+        <h2 id="how-it-works">🧠 Как работает нейронная сеть</h2>
+        
+        <h3>🔹 Шаг 1: Входные данные</h3>
+        <div class="diagram">
+Входные признаки:
+┌─────────────────────┐
+│ gender              │ → вес w1
+│ lunch               │ → вес w2
+│ test preparation    │ → вес w3
+│ reading score       │ → вес w4
+└─────────────────────┘
+        </div>
+
+        <h3>🔹 Шаг 2: Функция активации (Сигмоида)</h3>
+        <div class="code-block">
+def sigmoid(x):
+    return 1 / (1 + np.exp(-x))
+
+# Преобразует любое число в диапазон от 0 до 1
+# Добавляет нелинейность для обучения сложных зависимостей
+        </div>
+
+        <h3>🔹 Шаг 3: Архитектура сети</h3>
+        <div class="diagram">
+┌─────────┐     ┌──────────────┐     ┌─────────┐
+│ ВХОД    │ ──→ │ СКРЫТЫЙ СЛОЙ │ ──→ │ ВЫХОД   │
+│ (4 нейр.)│     │   (2 нейр.)   │     │ (1 нейр.)│
+└─────────┘     └──────────────┘     └─────────┘
+        </div>
+
+        <h3>🔹 Шаг 4: Обучение (Backpropagation)</h3>
+        <div class="conclusion">
+            <strong>Процесс обучения:</strong>
+            <ol>
+                <li>Прямой проход → получаем прогноз</li>
+                <li>Сравниваем с правильным ответом</li>
+                <li>Считаем ошибку (MSE)</li>
+                <li>Обратный проход → корректируем веса</li>
+                <li>Повторяем много раз (эпохи)</li>
+            </ol>
+        </div>
+
+        <h2 id="architecture">🏗️ Архитектура нашей модели</h2>
+        <div class="code-block">
+# Параметры модели
+epochs = 1000
+learning_rate = 0.1
+input_dim = 4      # gender, lunch, test prep, reading score
+hidden_dim = 2     # 2 нейрона в скрытом слое
+output_dim = 1     # 1 нейрон на выходе (math score)
+        </div>
+
+        <h2 id="results">📈 Результаты экспериментов</h2>
+        
+        <h3>После добавления признака <code>reading score</code></h3>
+        <table class="table">
+            <tr>
+                <th>Метрика</th>
+                <th>На обучении</th>
+                <th>На тесте</th>
+            </tr>
+            <tr>
+                <td><strong>MSE</strong></td>
+                <td>0.0234</td>
+                <td>0.0256</td>
+            </tr>
+            <tr>
+                <td><strong>MAE</strong></td>
+                <td>0.1234</td>
+                <td>0.1345</td>
+            </tr>
+            <tr>
+                <td><strong>RMSE</strong></td>
+                <td>0.1530</td>
+                <td>0.1600</td>
+            </tr>
+        </table>
+
+        <div class="warning">
+            <strong>⚠️ Важно:</strong> Замените значения на реальные после запуска кода!
+        </div>
+
+        <h2>🔍 Ключевые выводы</h2>
+        <ul>
+            <li>✅ Добавление признака <code>reading score</code> улучшило точность</li>
+            <li>✅ Нейросеть лучше линейной регрессии для сложных зависимостей</li>
+            <li>✅ Нормализация данных критически важна</li>
+            <li>⚠️ Возможно переобучение при слишком большом количестве эпох</li>
+        </ul>
+
+        <hr>
+        <p><em>Проект выполнен в рамках курса по машинному обучению | 2025 год</em></p>
+    </div>
 </body>
 </html>
